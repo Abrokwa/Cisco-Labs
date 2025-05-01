@@ -9,6 +9,5 @@ This repository contains:
 
 - 🔌 **Router & Switch Configurations** – Real-world examples using Cisco CLI  
 - 🌐 **Network Topologies** – LAN, WAN, VLANs, Inter-VLAN routing, etc.  
-- 🔐 **Security Setups** – ACLs, port security, firewall basics  
-- 📋 **Study Notes** – Command references and exam preparation (e.g., CCNA)  
+- 🔐 **Security Setups** – ACLs, port security, firewall basics   
 - 🧪 **Lab Exercises** – Step-by-step guided labs using Cisco Packet Tracer
