@@ -1,7 +1,7 @@
 # Cisco-Labs
 
 
-# VLAN and Inter-VLAN Routing Lab (Router-on-a-Stick) - Cisco Packet Tracer
+# 1) VLAN and Inter-VLAN Routing Lab (Router-on-a-Stick) - Cisco Packet Tracer
 
 This repository documents a basic lab setup for VLAN configuration and inter-VLAN routing using a Cisco 2960 switch and a Cisco 2911 router in Cisco Packet Tracer.
 
