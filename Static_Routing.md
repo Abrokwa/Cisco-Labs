@@ -84,6 +84,6 @@ write memory
 
 
 
-AUTHOR
+###AUTHOR
 NANA KOFI ABROKWA
 
