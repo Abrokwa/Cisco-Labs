@@ -1,11 +1,11 @@
 STATIC ROUTING AND DHCP SETUP BETWEEN TWO NETWORKS ON A CAMPUS
 
-Objective
+OBJECTIVE
 Configure static routes on two routers to enable communication between two separate networks and set up DHCP servers on both networks to automatically assign IP addresses to clients.
 
 
 
-Network Topology
+NETWORK TOPOLOGY
 
 - Network A: 192.168.1.0/24  
 - Router1 LAN interface: GigabitEthernet0/1, IP: 192.168.1.1  
