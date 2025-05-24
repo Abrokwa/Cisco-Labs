@@ -1,4 +1,4 @@
-Static Routing and DHCP Setup Between Two Networks
+STATIC ROUTING AND DHCP SETUP BETWEEN TWO NETWORKS ON A CAMPUS
 
 Objective
 Configure static routes on two routers to enable communication between two separate networks and set up DHCP servers on both networks to automatically assign IP addresses to clients.
