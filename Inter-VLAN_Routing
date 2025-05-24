@@ -1,14 +1,14 @@
 
-# VLAN and Inter-VLAN Routing Lab (Router-on-a-Stick) - Cisco Packet Tracer
+VLAN and Inter-VLAN Routing Lab (Router-on-a-Stick) - Cisco Packet Tracer
 
 This is a basic lab setup for VLAN configuration and inter-VLAN routing using a Cisco 2960 switch and a Cisco 2911 router in Cisco Packet Tracer.
 
-## Lab Objective
+ Lab Objective
 To simulate a small office network with two departments (HR and IT) using VLANs, and to configure inter-VLAN communication using a single router interface (Router-on-a-Stick method).
 
-## Topology Overview
+ Topology Overview
 
-**NOTE: PC = COMPUTER**
+NOTE: PC = COMPUTER
 
         [Router: G0/0]
              |
@@ -19,14 +19,14 @@ To simulate a small office network with two departments (HR and IT) using VLANs,
 
 VLAN 10: PC1, PC2 (HR Department)
 VLAN 20: PC3, PC4 (IT Department)
-```
 
-## Devices Used
+
+ Devices Used
 - 1 x Cisco 2911 Router
 - 1 x Cisco 2960 Switch
 - 4 x PCs
 
-## IP Address Plan
+ IP Address Plan
 | Device           | IP Address     | VLAN  | Role                |
 |------------------|----------------|-------|---------------------|
 | PC1              | 192.168.10.2   | 10    | HR                  |
@@ -36,10 +36,10 @@ VLAN 20: PC3, PC4 (IT Department)
 | Router G0/0.10   | 192.168.10.1   | 10    | Gateway for VLAN 10 |
 | Router G0/0.20   | 192.168.20.1   | 20    | Gateway for VLAN 20 |
 
-## Step-by-Step Configuration
+ Step-by-Step Configuration
 
-### Step 1: Configure VLANs on the Switch
-```bash
+ Step 1: Configure VLANs on the Switch
+
 Switch> enable
 Switch# configure terminal
 Switch(config)# vlan 10
@@ -48,10 +48,10 @@ Switch(config-vlan)# exit
 Switch(config)# vlan 20
 Switch(config-vlan)# name IT
 Switch(config-vlan)# exit
-```
 
-### Step 2: Assign Ports to VLANs
-```bash
+
+ Step 2: Assign Ports to VLANs
+
 Switch(config)# interface range fa0/2 - 3
 Switch(config-if-range)# switchport mode access
 Switch(config-if-range)# switchport access vlan 10
@@ -61,17 +61,17 @@ Switch(config)# interface range fa0/4 - 5
 Switch(config-if-range)# switchport mode access
 Switch(config-if-range)# switchport access vlan 20
 Switch(config-if-range)# exit
-```
 
-### Step 3: Set Trunk Port (Switch Port Connected to Router)
-```bash
+
+ Step 3: Set Trunk Port (Switch Port Connected to Router)
+
 Switch(config)# interface fa0/1
 Switch(config-if)# switchport mode trunk
 Switch(config-if)# exit
-```
 
-### Step 4: Configure Subinterfaces on Router (Router-on-a-Stick)
-```bash
+
+ Step 4: Configure Subinterfaces on Router (Router-on-a-Stick)
+
 Router> enable
 Router# configure terminal
 Router(config)# interface gigabitEthernet 0/0.10
@@ -87,41 +87,41 @@ Router(config-subif)# exit
 Router(config)# interface gigabitEthernet 0/0
 Router(config-if)# no shutdown
 Router(config-if)# exit
-```
 
-### Step 5: Configure PCs with IP Addresses
 
-#### For PC1 & PC2 (HR VLAN 10):
+ Step 5: Configure PCs with IP Addresses
+
+ For PC1 & PC2 (HR VLAN 10):
 - IP: 192.168.10.2 / 192.168.10.3
 - Subnet Mask: 255.255.255.0
 - Default Gateway: 192.168.10.1
 
-#### For PC3 & PC4 (IT VLAN 20):
+ For PC3 & PC4 (IT VLAN 20):
 - IP: 192.168.20.2 / 192.168.20.3
 - Subnet Mask: 255.255.255.0
 - Default Gateway: 192.168.20.1
 
-### Step 6: Test Connectivity
+ Step 6: Test Connectivity
 
 Open the command prompt on any PC and run:
-```bash
-ping 192.168.10.3   # From PC1 to PC2
-ping 192.168.20.2   # From PC3 to PC4
-```
+
+ping 192.168.10.3    From PC1 to PC2
+ping 192.168.20.2    From PC3 to PC4
+
 
 Both pings should work — showing that VLANs can now communicate through the router.
 
----
 
-## Summary (Simple Explanation)
-- VLANs are like **separate rooms** in a building.
-- A **trunk port** carries traffic from all rooms (VLANs) to the router.
-- The router uses **subinterfaces** (virtual mini-doors) to connect with each VLAN.
-- This setup is called **Router-on-a-Stick**.
 
-Each VLAN has its own IP range and gateway, but the router lets them **communicate safely and efficiently.**
+ Summary (Simple Explanation)
+- VLANs are like separate rooms in a building.
+- A trunk port carries traffic from all rooms (VLANs) to the router.
+- The router uses subinterfaces (virtual mini-doors) to connect with each VLAN.
+- This setup is called Router-on-a-Stick.
 
----
+Each VLAN has its own IP range and gateway, but the router lets them communicate safely and efficiently.
 
-## Author
-Nana Kofi Abrokwa
+
+
+AUTHOR
+NANA KOFI ABROKWA
